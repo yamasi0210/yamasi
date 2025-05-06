@@ -1,0 +1,152 @@
+html {
+  background-color: black;
+}
+
+
+
+
+/* 余白 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+
+
+/* 黒店 */
+header nav ul li {
+  list-style: none;
+}
+
+
+
+nav {
+
+  padding: 10px 20px;
+  /* ナビゲーション全体の余白 */
+  background-color: #ffa3a3;
+  /* 背景色を追加 */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  /* 右側へ配置 */
+  align-items: center;
+  /* 縦方向の整列 */
+  gap: 30px;
+  /* 各アイテム間の余白 */
+
+}
+
+/* 下線動き */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #333;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+/* 線 */
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+/* 下線動き */
+
+
+
+nav ul li {
+  padding: 10px;
+}
+/* ナビゲーション文字の大きさ */
+
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  /* 色を落ち着いたトーンに */
+  font-size: 18px;
+  font-weight: bold;
+  /* 視認性を高める */
+  /* padding: 8px 16px; クリックしやすく */
+  /* border-radius: 5px; 角を少し丸く */
+  /* transition: background 0.3s ease-in-out; */
+  
+}
+
+
+/* 画像表示 */
+.hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.hero .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.hero .slide.active {
+  opacity: 1;
+}
+
+/* 画像動かす */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.arrow.left {
+  left: 20px;
+}
+
+.arrow.right {
+  right: 20px;
+}
+
+
+
+
+
+
+
+
+
